@@ -9,7 +9,10 @@ help:
 	@echo "  make install    - Install from requirements.txt"
 	@echo "  make wordcount  - count words"
 	@echo "  make combine    - combines files"
-	@echo "
+	@echo "  make classmethod - classmethod"
+	@echo "  make staticmethod - static method"
+	@echo "  make decorator - decorator"
+	@echo "  make concat - concat"
 
 run:
 	python file_handler.py
@@ -33,6 +36,14 @@ classmethod:
 	python demo_classmethod.py
 
 decorator:
+	python demo_decorator.py
+
+alldemo:
+	python demo_combine.py
+	python demo_concat.py
+	python demo_wordcount.py
+	python demo_staticmethod.py
+	python demo_classmethod.py
 	python demo_decorator.py
 
 clean:
