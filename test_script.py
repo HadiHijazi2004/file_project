@@ -1,13 +1,9 @@
-from file_handler import AdvancedFileHandler
+from file_handler import FileHandler, AdvancedFileHandler
 
-#create a AdvancedFileHandler from combined file
-adv = AdvancedFileHandler("combined_file.txt") 
+fh1 = FileHandler("sample1.txt")
+fh2 = FileHandler("sample2.txt")
+combined = fh1 + fh2
 
-
-
-#print the object
+adv = AdvancedFileHandler(combined.filename)
 print(adv)
-
-
-#count and print total number of words
 print("Total words:", adv.count_words())
