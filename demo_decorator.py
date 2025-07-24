@@ -1,4 +1,4 @@
-from file_handler import deco  # Assuming deco is in file_handler.py
+from file_handler import deco  
 
 @deco("green")
 def greet():

@@ -5,7 +5,7 @@ f2 = FileHandler("sample2.txt")
 
 combined = f1.concat_files(f2)
 
-print(f"\n✅ Files combined into: {combined.filename}\n")
+print(f"\n Files combined into: {combined.filename}\n")
 with open(combined.filename, "r") as f:
-    print("📄 Combined file content:")
+    print(" Combined file content:")
     print(f.read())
