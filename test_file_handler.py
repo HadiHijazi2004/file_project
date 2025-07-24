@@ -38,3 +38,19 @@ def test_file_combination(tmp_path):
         lines = [line.strip() for line in f.readlines()]
 
     assert lines == ["Hello", "World", "Python", "Rocks"]
+
+
+
+def test_concat_files(tmp_path):
+    file1 = tmp_path / "file1.txt"
+    file2 = tmp_path / "file2.txt"
+    file1.write_text("One\nTwo")
+    file2.write_text("Three\nFour")
+
+    af = AdvancedFileHandler(str(file1))
+    fh2 = FileHandler(str(file2))
+
+    combined = af.concat_files(fh2)
+    with open(combined.filename, "r") as f:
+        lines = [line.strip() for line in f.readlines()]
+    assert lines == ["One", "Two", "Three", "Four"]
