@@ -1,19 +1,19 @@
 .PHONY: help run test clean venv install
 
 help:
-	@echo ""
-	@echo "Usage:"
-	@echo "  make run        - Run file_handler.py"
-	@echo "  make test       - Run all pytest tests"
-	@echo "  make clean      - Delete generated .txt files"
-	@echo "  make install    - Install from requirements.txt"
-	@echo "  make wordcount  - count words"
-	@echo "  make combine    - combines files"
-	@echo "  make classmethod - classmethod"
-	@echo "  make staticmethod - static method"
-	@echo "  make decorator - decorator"
-	@echo "  make concat - concat"
-	@echo "  make alldemo- runs all demos"
+	 ""
+	"Usage:"
+    "  make run        - Run file_handler.py"
+	"  make test       - Run all pytest tests"
+    "  make clean      - Delete generated .txt files"
+    "  make install    - Install from requirements.txt"
+	"  make wordcount  - count words"
+	"  make combine    - combines files"
+	"  make classmethod - classmethod"
+	"  make staticmethod - static method"
+	"  make decorator - decorator"
+	"  make concat - concat"
+	"  make alldemo- runs all demos"
 
 run:
 	python file_handler.py
