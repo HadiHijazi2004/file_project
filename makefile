@@ -1,19 +1,19 @@
-.PHONY: help run test clean venv install
+.PHONY: help run test clean install combine concat wordcount static classmethod decorator alldemo
 
 help:
-	 ""
-	"Usage:"
-    "  make run        - Run file_handler.py"
-	"  make test       - Run all pytest tests"
-    "  make clean      - Delete generated .txt files"
-    "  make install    - Install from requirements.txt"
-	"  make wordcount  - count words"
-	"  make combine    - combines files"
-	"  make classmethod - classmethod"
-	"  make staticmethod - static method"
-	"  make decorator - decorator"
-	"  make concat - concat"
-	"  make alldemo- runs all demos"
+	@echo ""
+	@echo "Usage:"
+	@echo "  make run         - Run file_handler.py"
+	@echo "  make test        - Run all pytest tests"
+	@echo "  make clean       - Delete generated .txt files"
+	@echo "  make install     - Install from requirements.txt"
+	@echo "  make wordcount   - Count words in file"
+	@echo "  make combine     - Combine two files using + operator"
+	@echo "  make classmethod - Demonstrate @classmethod"
+	@echo "  make static      - Demonstrate @staticmethod"
+	@echo "  make decorator   - Demonstrate custom decorator"
+	@echo "  make concat      - Concatenate multiple files"
+	@echo "  make alldemo     - Run all demo files"
 
 run:
 	python file_handler.py
@@ -43,12 +43,4 @@ alldemo:
 	python demo_combine.py
 	python demo_concat.py
 	python demo_wordcount.py
-	python demo_staticmethod.py
-	python demo_classmethod.py
-	python demo_decorator.py
-
-clean:
-	del /q *.txt 2>nul || echo "No .txt files to delete"
-
-install:
-	pip install -r requirements.txt
+	python demo_static.py
