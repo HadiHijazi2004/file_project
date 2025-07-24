@@ -7,7 +7,9 @@ help:
 	@echo "  make test       - Run all pytest tests"
 	@echo "  make clean      - Delete generated .txt files"
 	@echo "  make install    - Install from requirements.txt"
-	@echo ""
+	@echo "  make wordcount  - count words"
+	@echo "  make combine    - combines files"
+	@echo "
 
 run:
 	python file_handler.py
@@ -15,11 +17,11 @@ run:
 test:
 	pytest
 
-demo:
-	python demo_concat.py
-
 combine:
 	python demo_combine.py
+
+concat:
+	python demo_concat.py
 
 wordcount:
 	python demo_wordcount.py
@@ -29,6 +31,9 @@ static:
 
 classmethod:
 	python demo_classmethod.py
+
+decorator:
+	python demo_decorator.py
 
 clean:
 	del /q *.txt 2>nul || echo "No .txt files to delete"

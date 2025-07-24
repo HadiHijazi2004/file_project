@@ -1,7 +1,4 @@
-Hello
-World
-Python
-Rocks
-File
+One
 Two
-Has Data
+Three
+Four
