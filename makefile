@@ -13,6 +13,7 @@ help:
 	@echo "  make staticmethod - static method"
 	@echo "  make decorator - decorator"
 	@echo "  make concat - concat"
+	@echo "  make alldemo- runs all demos"
 
 run:
 	python file_handler.py
