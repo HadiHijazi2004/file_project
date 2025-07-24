@@ -1,25 +1,25 @@
 import pytest 
 from file_handler import FileHandler, AdvancedFileHandler
 
-#fixture to create a sample file with text
+
 @pytest.fixture
 def sample_file(tmp_path):
     test_file = tmp_path / "testfile.txt"
     test_file.write_text("Hello World\nPython is fun")
     return str(test_file)
 
-#fixture for AdvancedFileHandler
+
 @pytest.fixture
 def advanced_file(sample_file):
     return AdvancedFileHandler(sample_file)
 
-#test 1: check line reading
+
 def test_read_lines(sample_file):
     fh = FileHandler(sample_file)
     lines = list(fh.read_lines())
     assert lines == ["Hello World", "Python is fun"]
 
-# test 2: check word count
+
 def test_word_count(advanced_file):
     assert advanced_file.count_words() == 5
 
